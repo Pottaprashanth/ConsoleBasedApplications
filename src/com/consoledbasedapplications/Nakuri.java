@@ -18,7 +18,7 @@ public class Nakuri {
 		if (q.equalsIgnoreCase("BTech")) {
 			System.out.println("Enter Branch:");
 			String branch = sc.nextLine();
-			if (branch.equalsIgnoreCase("CSE") || branch.equalsIgnoreCase("IT")) {
+			if (branch.equalsIgnoreCase("CSE") || branch.equalsIgnoreCase("IT") || branch.equalsIgnoreCase("ECE")) {
 				System.out.println("Do you have Any Backlogs:");
 				int back = sc.nextInt();
 				if (back <= 0) {
