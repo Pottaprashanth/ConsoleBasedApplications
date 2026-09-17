@@ -2,7 +2,7 @@ package com.consoledbasedapplications;
 
 import java.util.Scanner;
 
-public class PrashanthFashonStore {
+public class PrashanthFashionStore {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
