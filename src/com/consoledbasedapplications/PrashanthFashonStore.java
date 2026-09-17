@@ -31,7 +31,6 @@ public class PrashanthFashonStore {
 			System.out.println("men");
 			System.out.println("women");
 			System.out.println("kid");
-			System.out.println("billing");
 			String catg = sc.next();
 			switch (catg) {
 			case "men" -> {
@@ -282,7 +281,6 @@ public class PrashanthFashonStore {
 					}
 
 					System.out.println("Do you want to continue with womens wear if Yes click Y or no click N");
-			
 
 					womenContinue = sc.next();
 
@@ -298,9 +296,9 @@ public class PrashanthFashonStore {
 
 				do {
 					System.out.println("Select Product:");
-					System.out.println("1. Shirt");
-					System.out.println("2. T-Shirt");
-					System.out.println("3. Pant");
+					System.out.println("Shirt");
+					System.out.println("T-Shirt");
+					System.out.println("Pant");
 
 					String product = sc.next();
 
@@ -418,7 +416,6 @@ public class PrashanthFashonStore {
 					}
 
 					System.out.println("Do you want to continue with kids wear if Yes click Y or no click N");
-					
 
 					kidsContinue = sc.next();
 
@@ -426,43 +423,7 @@ public class PrashanthFashonStore {
 
 				System.out.println("Exit From Kids Wear");
 			}
-			case "billing" -> {
 
-				System.out.println("==============================");
-				System.out.println("     Prashanth Fashion Hub     ");
-				System.out.println("==============================");
-
-				System.out.println("Men's Shirt     : " + sprice + " rs");
-				System.out.println("Men's T-Shirt   : " + tsprice + " rs");
-				System.out.println("Men's Pant      : " + pprice + " rs");
-
-				System.out.println("------------------------------");
-
-				System.out.println("Women's Dress   : " + womenDressPrice + " rs");
-				System.out.println("Women's Top     : " + womenTopPrice + " rs");
-				System.out.println("Women's Jeans   : " + womenJeansPrice + " rs");
-
-				System.out.println("------------------------------");
-
-				System.out.println("Kids Shirt      : " + kidsShirtPrice + " rs");
-				System.out.println("Kids T-Shirt    : " + kidsTshirtPrice + " rs");
-				System.out.println("Kids Pant       : " + kidsPantPrice + " rs");
-
-				double totalPrice = sprice + tsprice + pprice + womenDressPrice + womenTopPrice + womenJeansPrice
-						+ kidsShirtPrice + kidsTshirtPrice + kidsPantPrice;
-
-				double gst = totalPrice * 18 / 100;
-
-				double finalAmount = totalPrice + gst;
-
-				System.out.println("------------------------------");
-				System.out.println("Subtotal        : " + totalPrice + " rs");
-				System.out.println("GST (18%)       : " + gst + " rs");
-				System.out.println("Final Amount    : " + finalAmount + " rs");
-				System.out.println("==============================");
-				System.out.println("     Thank You For Shopping");
-				System.out.println("==============================");
-			}
 			default -> {
 				System.out.println("Enter category is not Available");
 			}
@@ -472,5 +433,58 @@ public class PrashanthFashonStore {
 			yn = sc.next();
 		} while (yn.equalsIgnoreCase("y"));
 
+		System.out.println("==============================");
+		System.out.println("     Prashanth Fashion Hub     ");
+		System.out.println("==============================");
+		if (sprice > 0) {
+			System.out.println("Men's Shirt     : " + sprice + " rs");
+		}
+		if (tsprice > 0) {
+			System.out.println("Men's T-Shirt   : " + tsprice + " rs");
+		}
+
+		if (pprice > 0) {
+			System.out.println("Men's Pant      : " + pprice + " rs");
+		}
+
+		System.out.println("------------------------------");
+
+		if (womenDressPrice > 0) {
+			System.out.println("Women's Dress   : " + womenDressPrice + " rs");
+		}
+		if (womenTopPrice > 0) {
+			System.out.println("Women's Top     : " + womenTopPrice + " rs");
+		}
+		if (womenJeansPrice > 0) {
+			System.out.println("Women's Jeans   : " + womenJeansPrice + " rs");
+		}
+
+		System.out.println("------------------------------");
+
+		if (kidsShirtPrice > 0) {
+			System.out.println("Kids Shirt      : " + kidsShirtPrice + " rs");
+		}
+		if (kidsTshirtPrice > 0) {
+			System.out.println("Kids T-Shirt    : " + kidsTshirtPrice + " rs");
+		}
+		if (kidsPantPrice > 0) {
+			System.out.println("Kids Pant       : " + kidsPantPrice + " rs");
+		}
+
+		double totalPrice = sprice + tsprice + pprice + womenDressPrice + womenTopPrice + womenJeansPrice
+				+ kidsShirtPrice + kidsTshirtPrice + kidsPantPrice;
+
+		double gst = totalPrice * 18 / 100;
+
+		double finalAmount = totalPrice + gst;
+
+		System.out.println("------------------------------");
+		System.out.println("Subtotal        : " + totalPrice + " rs");
+		System.out.println("GST (18%)       : " + gst + " rs");
+		System.out.println("Final Amount    : " + finalAmount + " rs");
+		System.out.println("==============================");
+		System.out.println("     Thank You For Shopping");
+		System.out.println("==============================");
 	}
+
 }
