@@ -62,7 +62,7 @@ public class Nakuri {
 								System.out.println("Experience not matching.");
 							}
 						} else {
-							System.out.println("CGPA Criteria not matching");
+							System.out.println("Skills Criteria not matching");
 						}
 
 					} else {
